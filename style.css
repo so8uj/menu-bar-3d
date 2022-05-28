@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@500;600;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    font-family: 'Baloo Bhai 2', cursive;
+}
+.header-div {
+    margin-bottom: 90px;
+}
+.header-div h1{
+    color: rgb(8, 170, 121);;
+}
+.menu-div ul{
+    list-style: none;
+    transform: skewY(-10deg);
+}
+.menu-div ul li{
+    padding: 10px 30px;
+    background: rgb(8, 170, 121);
+    position: relative;
+    align-items: center;
+    z-index: var(--i);
+    display: flex;
+    justify-content: center;
+    transition: .3s;
+}
+
+.menu-div ul li:hover{
+    transform: translateX(35px);
+    transition: .3s;
+    background: #028b8b;
+}
+
+
+.menu-div ul li::before {
+    content: '';
+    height: 100%;
+    width: 40px;
+    background: #058d64;
+    position: absolute;
+    left: -40px;
+    top: -0;
+    transform: skewY(45deg);
+    transform-origin: right;
+}
+
+.menu-div ul li::after {
+    content: '';
+    height: 40px;
+    width: 100%;
+    background: #058d64;
+    position: absolute;
+    transform: skewX(45deg);
+    left: 0;
+    top: -40px;
+    transform-origin: bottom;
+    
+}
+.menu-div ul li:hover:before , .menu-div ul li:hover::after{
+    background: #026868;
+    transition: .3s;
+}
+.menu-div ul li a{
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    letter-spacing: 2px;
+    transition: .3s;
+}
+.menu-div ul li:last-child::after{
+    box-shadow: -70px 100px 15px #2b2a2a;
+}
