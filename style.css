@@ -80,3 +80,10 @@ body{
 .menu-div ul li:last-child::after{
     box-shadow: -70px 100px 15px #2b2a2a;
 }
+
+/* responsive css */
+@media screen and (max-width:560px) {
+    .header-div h1{
+        font-size: 20px;
+    }
+}
